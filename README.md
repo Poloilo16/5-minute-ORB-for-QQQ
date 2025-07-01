@@ -41,3 +41,21 @@ Where:
 - **Commission**: $0.0005 per share (entry and exit)
 - **Risk per Trade**: 1% of capital
 - **Target**: 10× the risk amount ($R)
+
+## Results Summary 
+
+The backtest results show that the **Long-Only ORB strategy** delivered the highest equity growth, outperforming both the **Buy & Hold QQQ** approach and the **Long & Short ORB variant**.
+
+- The **Long-Only strategy** performed best in capturing upside breakouts during bullish momentum.
+- The **Buy & Hold** portfolio showed steady gains, benefiting from QQQ's long-term upward bias.
+- The **Long & Short strategy**, while more dynamic, underperformed due to whipsaws and short-side losses during choppy or upward-trending sessions.
+
+These results suggest that in the tested period, directional simplicity (long-only) offered more consistent returns than adding short exposure, at least within the ORB framework.
+
+## Limitations
+
+- **No Slippage or Fill Delay**: Assumes perfect execution at breakout, stop, or target levels, which may not reflect real-world trading conditions.
+- **No Overnight Risk**: Positions are closed by end-of-day; the model ignores potential overnight gaps or multi-day holding opportunities.
+- **No Trade Filtering**: All breakouts are treated equally; no confirmation via volume, trend, or volatility filters is applied.
+- **Fixed Parameters**: Profit target is set at 10× risk for all trades; results could vary with dynamic target sizing or trailing exits.
+- **Limited Backtest Horizon**: Short testing window may not fully capture broader market cycles or structural shifts.
